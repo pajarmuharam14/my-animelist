@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
-import { getTopAnimeResponse } from "../Services/api/api";
+import { getAnimeResponse } from "../Services/api/api";
 import AnimeList from "../Components/AnimeList";
 import Pagination from "../Components/Pagination";
 
@@ -10,7 +10,7 @@ const TopAnimePage = () => {
   const [page, setPage] = useState(1);
 
   const fetchData = async () => {
-    const populerAnime = await getTopAnimeResponse("top/anime", `page=${page}`);
+    const populerAnime = await getAnimeResponse("top/anime", `page=${page}`);
     setTopAnime(populerAnime);
   };
 

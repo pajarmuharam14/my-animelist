@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import AnimeList from "../Components/AnimeList";
 import Navbar from "../Components/Navbar";
-import { getTopAnimeResponse } from "../Services/api/api";
+import { getAnimeResponse } from "../Services/api/api";
 
-const topAnime = await getTopAnimeResponse("top/anime", "limit=10");
+const topAnime = await getAnimeResponse("top/anime", "limit=10");
 const HomePage = () => {
   return (
     <div>

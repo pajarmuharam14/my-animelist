@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import HomePage from "./Pages/HomePage";
 import TopAnimePage from "./Pages/TopAnimePage";
+import Search from "./Pages/Search";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/topAnime",
     element: <TopAnimePage />,
+  },
+  {
+    path: "/search/:keyword",
+    element: <Search />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
