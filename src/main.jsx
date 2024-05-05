@@ -6,6 +6,7 @@ import "./index.css";
 import HomePage from "./Pages/HomePage";
 import TopAnimePage from "./Pages/TopAnimePage";
 import Search from "./Pages/Search";
+import Anime from "./Pages/Anime";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/search/:keyword",
     element: <Search />,
+  },
+  {
+    path: "/anime/:id",
+    element: <Anime />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
