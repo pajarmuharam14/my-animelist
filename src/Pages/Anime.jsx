@@ -14,7 +14,6 @@ const Anime = () => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const { data } = dataAnime;
   return (
     <div>
