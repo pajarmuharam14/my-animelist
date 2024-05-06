@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const AnimeList = ({ api }) => {
-  console.log(api);
   return (
     <div className="flex flex-wrap gap-7 my-10 justify-center">
       {api.data?.map((item, index) => (

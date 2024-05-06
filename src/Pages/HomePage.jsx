@@ -2,9 +2,20 @@ import { Link } from "react-router-dom";
 import AnimeList from "../Components/AnimeList";
 import Navbar from "../Components/Navbar";
 import { getAnimeResponse } from "../Services/api/api";
+import { useEffect, useState } from "react";
 
-const topAnime = await getAnimeResponse("top/anime", "limit=10");
 const HomePage = () => {
+  const [topAnime, setTopAnime] = useState([]);
+
+  useEffect(() => {
+    const fetchDataTopAnime = async () => {
+      const topAnime = await getAnimeResponse("top/anime", "limit=10");
+      setTopAnime(topAnime);
+    };
+
+    fetchDataTopAnime();
+  }, []);
+
   return (
     <div>
       <Navbar />
